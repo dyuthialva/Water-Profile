@@ -1,0 +1,135 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* 🌇 Background with soft animated gradient */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ff6a88, #ff99ac, #845ec2, #4b4453);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+/* Animate background for motion effect */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🧠 Title */
+h1 {
+  font-size: 2.6em;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff8f0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  letter-spacing: 1.5px;
+}
+
+/* 💧 Card containers */
+#inputs, #result {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 460px;
+  margin: 25px auto;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(140, 140, 140, 0.3);
+}
+
+#inputs:hover, #result:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 35px rgba(255,255,255,0.2);
+}
+
+/* 🏷 Labels & Inputs */
+label {
+  display: block;
+  font-weight: 600;
+  color: #fefafb;
+  margin-top: 12px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(247, 244, 244, 0.2);
+  color: #fff;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(240, 189, 189, 0.6);
+}
+
+input:focus, select:focus {
+  background: rgba(145, 31, 31, 0.35);
+  box-shadow: 0 0 12px rgba(254, 245, 233, 0.8);
+}
+
+/* 🔘 Button */
+button {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 35px;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 130, 130, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(90deg, #ff5e62, #ff9966);
+  box-shadow: 0 0 35px rgba(255, 153, 102, 0.8);
+}
+
+/* 📊 Result Box */
+#result {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 5px solid #ffb6b9;
+}
+
+#result b {
+  color: #ffd166;
+  text-shadow: 0 0 12px rgba(255, 214, 102, 0.9);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  button {
+    width:100%;
+ }
+}

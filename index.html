@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 💧Water Quality Calculator</title>
+
+  <!--  Link to external CSS -->
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+  <h1> 💧 Water Quality Calculator</h1>
+
+  <div style="text-align:center;">
+    <label for="choice">  Select Parameter :</label>
+    <select id="choice">
+      <option value="1">💦 Hardness of Water</option>
+      <option value="2">🧪 Alkalinity of Water</option>
+      <option value="3">O₂  DO (Dissolved Oxygen)</option>
+      <option value="4">🌿 BOD (Biochemical Oxygen Demand)</option>
+      <option value="5">🔥 COD (Chemical Oxygen Demand)</option>
+      <option value="6"> Cl₂ Chlorine Content</option>
+    </select>
+  </div>
+
+  <div id="inputs"></div>
+
+  <div style="text-align:center;">
+    <button onclick="calculate()">Calculate</button>
+  </div>
+
+  <div id="result"></div>
+
+  <!-- ✅ Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+<footer>
+  <h6>✨ Made by  <b>Ziya Malik</b> , <b>Dyuthi Alva</b> & <b>Kimaya Suryawanshi</b> ✨ </h6>
+</footer>
+</html>
